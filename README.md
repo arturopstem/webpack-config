@@ -9,7 +9,7 @@ VSCode extensions:
 
 ## Getting started
 
-To begin, create a .gitignore file:
+To begin, create a **.gitignore** file:
 
 ```console
   touch .gitignore
@@ -184,13 +184,13 @@ In file **tailwind.config.js** content should be updated to
 
 ## Webpack config file
 
-Create webpack.config.js file
+Create **webpack.config.js** file
 
 ```console
   touch webpack.config.js
 ```
 
-Give webpack.config.js the following content
+Give **webpack.config.js** the following content
 
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -240,7 +240,7 @@ module.exports = (env, argv) => {
 
 ## Add npm scripts
 
-In file package.json, update scripts to contain the following:
+In file **package.json**, update scripts to contain the following:
 
 ```json
 "scripts": {
@@ -261,7 +261,7 @@ In file package.json, update scripts to contain the following:
   touch src/index.html src/index.js src/main.css
 ```
 
-In index.html file add the a template like the following
+In **index.html** file add the a template like the following
 
 ```html
 <!DOCTYPE html>
@@ -276,7 +276,7 @@ In index.html file add the a template like the following
 </html>
 ```
 
-In main.css add the Tailwind directives and some css
+In **main.css** add the Tailwind directives and some css
 
 ```css
 @tailwind base;
@@ -288,7 +288,7 @@ In main.css add the Tailwind directives and some css
 }
 ```
 
-In index.js add the following content
+In **index.js** add the following content
 
 ```js
 import './main.css';
