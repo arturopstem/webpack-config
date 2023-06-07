@@ -37,7 +37,9 @@ Initialize ESLint config
 
 ```console
   npm init @eslint/config
+```
 
+```console
 ? How would you like to use ESLint? …
   To check syntax only
   To check syntax and find problems
@@ -152,7 +154,13 @@ Install webpack plugins
 
 ```console
   npm i -D html-webpack-plugin eslint-webpack-plugin
+```
+
+```console
   npm i -D mini-css-extract-plugin css-minimizer-webpack-plugin css-loader
+```
+
+```console
   npm i -D webpack-dev-server
 ```
 
@@ -247,6 +255,9 @@ In file package.json, update scripts to contain the following:
 
 ```console
   mkdir src
+```
+
+```console
   touch src/index.html src/index.js src/main.css
 ```
 
