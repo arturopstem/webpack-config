@@ -79,7 +79,7 @@ Checking peerDependencies of eslint-config-airbnb-base@latest
 The config that you've selected requires the following dependencies:
 
 eslint-config-airbnb-base@latest eslint@^7.32.0 || ^8.2.0 eslint-plugin-import@^2.25.2
-? Would you like to install them now? ‣ No / Yes
+? Would you like to install them now?   No / ‣ Yes
 
 ? Which package manager do you want to use? …
 ▸ npm
