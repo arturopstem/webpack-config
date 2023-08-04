@@ -319,7 +319,7 @@ document.body.appendChild(component());
 
 ## Enjoy
 
-Now just `npm run start` to open a dev server.
+Now just `npm start` to open a dev server.
 
 And `npm run build` or `npm run dev` depending which mode you select.
 
