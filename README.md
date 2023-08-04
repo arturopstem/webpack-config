@@ -266,7 +266,7 @@ In file **package.json**, update scripts to contain the following:
 ```
 
 ```console
-  touch src/{index.html,index.js,main.css}
+  touch src/{index.{html,js},main.css}
 ```
 
 In **index.html** file add the a template like the following
