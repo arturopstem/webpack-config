@@ -125,7 +125,15 @@ with the following rules
 
 ```json
 {
-  "singleQuote": true
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": ["*.css", "*.scss", "*.sass", "*.less"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }
 ```
 
