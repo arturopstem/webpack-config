@@ -1,16 +1,13 @@
 import './main.css';
 
-function component() {
-  const element = document.createElement('h1');
+const markup = `
+<h1 class="text-3xl font-bold underline text-orange-500">
+  Webpack + Tailwind + ESLint + Prettier
+</h1>
+`;
 
-  element.innerHTML = 'Webpack Tailwind + ESLint + Prettier';
-  const twClasses = ['text-3xl', 'font-bold', 'underline', 'text-orange-500'];
-  element.classList.add(...twClasses);
+const h1 = new DOMParser()
+  .parseFromString(markup, 'text/html')
+  .querySelector('h1');
 
-  console.log(
-    'Message to be deleted or disable with eslint comment or eslint config rule'
-  );
-  return element;
-}
-
-document.body.appendChild(component());
+document.body.appendChild(h1);
