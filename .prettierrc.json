@@ -3,10 +3,7 @@
   "overrides": [
     {
       "files": [
-        "*.css",
-        "*.scss",
-        "*.sass",
-        "*.less"
+        "*.css"
       ],
       "options": {
         "singleQuote": false

@@ -1,27 +1,4 @@
-# Webpack Config
-
-## Prerequisites
-
-VSCode extensions:
-
-- ESLint
-- Prettier
-
-## Getting started
-
-To begin, create a .gitignore file:
-
-```console
-  touch .gitignore
-```
-
-Add node_modules to .gitignore to not upload all the packages to the remote repo:
-
-```txt
-  node_modules
-```
-
-# Webpack Config: Tailwind + ESLint + Prettier
+# Webpack Config: ESLint + Prettier
 
 ## Prerequisites
 
@@ -151,7 +128,7 @@ with the following rules
   "singleQuote": true,
   "overrides": [
     {
-      "files": ["*.css", "*.scss", "*.sass", "*.less"],
+      "files": ["*.css"],
       "options": {
         "singleQuote": false
       }
