@@ -12,31 +12,31 @@ VSCode extensions:
 To begin, create a **.gitignore** file:
 
 ```console
-  touch .gitignore
+touch .gitignore
 ```
 
 Add node_modules to .gitignore to not upload all the packages to the remote repo:
 
 ```txt
-  node_modules
+node_modules
 ```
 
 ## Initialize NPM
 
 ```console
-  npm init -y
+npm init -y
 ```
 
 ## ESLint and Prettier
 
 ```console
-  npm i -D eslint prettier eslint-config-prettier
+npm i -D eslint prettier eslint-config-prettier
 ```
 
 Initialize ESLint config
 
 ```console
-  npm init @eslint/config
+npm init @eslint/config
 ```
 
 ```console
@@ -118,7 +118,7 @@ As well as some rules
 Create **.prettierrc.json** file
 
 ```console
-  touch .prettierrc.json
+touch .prettierrc.json
 ```
 
 with the following rules
@@ -155,33 +155,33 @@ Open Command Pallete with `Ctrl + Shift + P`, look for and select `Preferences: 
 ## Install Webpack
 
 ```console
-  npm i -D webpack webpack-cli
+npm i -D webpack webpack-cli
 ```
 
 Install webpack plugins
 
 ```console
-  npm i -D html-webpack-plugin eslint-webpack-plugin
+npm i -D html-webpack-plugin eslint-webpack-plugin
 ```
 
 ```console
-  npm i -D mini-css-extract-plugin css-minimizer-webpack-plugin css-loader
+npm i -D mini-css-extract-plugin css-minimizer-webpack-plugin css-loader
 ```
 
 ```console
-  npm i -D webpack-dev-server
+npm i -D webpack-dev-server
 ```
 
 Install tailwind
 
 ```console
-  npm i -D tailwindcss postcss autoprefixer postcss-loader
+npm i -D tailwindcss postcss autoprefixer postcss-loader
 ```
 
 Initialize tailwind and create postcssconfig file
 
 ```console
-  npx tailwind init -p
+npx tailwind init -p
 ```
 
 In file **tailwind.config.js** content should be updated to
@@ -195,7 +195,7 @@ In file **tailwind.config.js** content should be updated to
 Create **webpack.config.js** file
 
 ```console
-  touch webpack.config.js
+touch webpack.config.js
 ```
 
 Give **webpack.config.js** the following content
@@ -263,11 +263,11 @@ In file **package.json**, update scripts to contain the following:
 ## Creation of example source files
 
 ```console
-  mkdir src
+mkdir src
 ```
 
 ```console
-  touch src/{index.{html,js},main.css}
+touch src/{index.{html,js},main.css}
 ```
 
 In **index.html** file add the a template like the following
