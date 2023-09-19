@@ -256,7 +256,7 @@ In file **package.json**, update scripts to contain the following:
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development",
     "start": "webpack serve --open --mode=development",
-    "publish": "git subtree push --prefix dist origin gh-pages"
+    "ghdeploy": "git subtree push --prefix dist origin gh-pages"
   },
 ```
 
@@ -320,6 +320,6 @@ Now just `npm start` to open a dev server.
 
 And `npm run build` or `npm run dev` depending which mode you select.
 
-Finally `npm run publish` to upload dist to GH pages.
+Finally `npm run ghdeploy` to upload dist to GH pages.
 
 This example is using some of the default paths for entry and output.
