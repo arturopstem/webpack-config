@@ -104,10 +104,7 @@ As well as some rules
 
 ```json
     "rules": {
-        "strict": [
-            "error",
-            "global"
-        ],
+        "no-console": "off",
         "quotes": [
             "error",
             "single"

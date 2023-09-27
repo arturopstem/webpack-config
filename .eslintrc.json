@@ -13,10 +13,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "strict": [
-            "error",
-            "global"
-        ],
+        "no-console": "off",
         "quotes": [
             "error",
             "single"
