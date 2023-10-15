@@ -257,7 +257,7 @@ mkdir src
 ```
 
 ```console
-touch src/{index.{html,js},main.css}
+touch src/{index.{html,js},style.css}
 ```
 
 In **index.html** file add the a template like the following
@@ -274,7 +274,7 @@ In **index.html** file add the a template like the following
 </html>
 ```
 
-In **main.css** add some css
+In **style.css** add some css
 
 ```css
 :root {
@@ -285,7 +285,7 @@ In **main.css** add some css
 In **index.js** add the following content
 
 ```js
-import './main.css';
+import './style.css';
 
 const markup = `
 <h1>Webpack + Babel + ESLint + Prettier</h1>
