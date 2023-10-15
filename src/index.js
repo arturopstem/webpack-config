@@ -1,4 +1,4 @@
-import './main.css';
+import './style.css';
 
 const markup = `
 <h1>Webpack + ESLint + Prettier</h1>
