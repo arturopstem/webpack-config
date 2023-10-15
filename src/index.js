@@ -1,4 +1,4 @@
-import './main.css';
+import './style.css';
 
 const markup = `
 <h1 class="text-3xl font-bold underline text-orange-500">
