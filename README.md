@@ -104,34 +104,8 @@ As well as some rules
 
 ```json
     "rules": {
-        "no-console": "off",
-        "quotes": [
-            "error",
-            "single"
-        ]
+        "no-console": "off"
     }
-```
-
-Create **.prettierrc.json** file
-
-```console
-touch .prettierrc.json
-```
-
-with the following rules
-
-```json
-{
-  "singleQuote": true,
-  "overrides": [
-    {
-      "files": ["*.css"],
-      "options": {
-        "singleQuote": false
-      }
-    }
-  ]
-}
 ```
 
 ### Set VSCode lint and format on save
@@ -157,15 +131,7 @@ npm i -D webpack webpack-cli
 Install webpack plugins
 
 ```console
-npm i -D html-webpack-plugin eslint-webpack-plugin
-```
-
-```console
-npm i -D mini-css-extract-plugin css-minimizer-webpack-plugin css-loader
-```
-
-```console
-npm i -D webpack-dev-server
+npm i -D html-webpack-plugin eslint-webpack-plugin mini-css-extract-plugin css-minimizer-webpack-plugin css-loader webpack-dev-server
 ```
 
 ## Webpack config file
@@ -179,15 +145,15 @@ touch webpack.config.js
 Give **webpack.config.js** the following content
 
 ```js
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const config = {
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: "./src/index.html",
     }),
     new MiniCssExtractPlugin(),
     new ESLintPlugin(),
@@ -197,7 +163,7 @@ const config = {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
@@ -208,12 +174,12 @@ const config = {
 };
 
 module.exports = (env, argv) => {
-  if (argv.mode === 'development') {
-    config.devtool = 'inline-source-map';
+  if (argv.mode === "development") {
+    config.devtool = "inline-source-map";
   }
-  if (argv.mode === 'production') {
+  if (argv.mode === "production") {
     config.optimization = {
-      minimizer: [new CssMinimizerPlugin(), '...'],
+      minimizer: [new CssMinimizerPlugin(), "..."],
     };
   }
   return config;
@@ -269,15 +235,15 @@ In **style.css** add some css
 In **index.js** add the following content
 
 ```js
-import './style.css';
+import "./style.css";
 
 const markup = `
 <h1>Webpack + ESLint + Prettier</h1>
 `;
 
 const h1 = new DOMParser()
-  .parseFromString(markup, 'text/html')
-  .querySelector('h1');
+  .parseFromString(markup, "text/html")
+  .querySelector("h1");
 
 document.body.appendChild(h1);
 ```
