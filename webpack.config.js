@@ -1,12 +1,12 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const ESLintPlugin = require("eslint-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const config = {
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
     new MiniCssExtractPlugin(),
     new ESLintPlugin(),
@@ -16,11 +16,7 @@ const config = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          { loader: "css-loader", options: { importLoaders: 1 } },
-          "postcss-loader",
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
     ],
   },
@@ -28,15 +24,17 @@ const config = {
   output: {
     clean: true,
   },
+
+  devServer: { watchFiles: './src/**/*' },
 };
 
 module.exports = (env, argv) => {
-  if (argv.mode === "development") {
-    config.devtool = "inline-source-map";
+  if (argv.mode === 'development') {
+    config.devtool = 'inline-source-map';
   }
-  if (argv.mode === "production") {
+  if (argv.mode === 'production') {
     config.optimization = {
-      minimizer: [new CssMinimizerPlugin(), "..."],
+      minimizer: [new CssMinimizerPlugin(), '...'],
     };
   }
   return config;
