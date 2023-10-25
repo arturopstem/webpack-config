@@ -24,6 +24,8 @@ const config = {
   output: {
     clean: true,
   },
+
+  devServer: { watchFiles: './src/**/*' },
 };
 
 module.exports = (env, argv) => {
