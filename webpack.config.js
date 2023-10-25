@@ -16,7 +16,14 @@ const config = {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
+          },
+          'postcss-loader',
+        ],
       },
     ],
   },
