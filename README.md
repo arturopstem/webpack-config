@@ -108,6 +108,28 @@ As well as some rules
     }
 ```
 
+Create **.prettierrc.json** file
+
+```console
+touch .prettierrc.json
+```
+
+with the following rules
+
+```json
+{
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": ["*.css", "*.scss", "*.sass", "*.less"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
+```
+
 ### Set VSCode lint and format on save
 
 Open Command Pallete with `Ctrl + Shift + P`, look for and select `Preferences: Open Workspace Settings (JSON)` and add the following content:
@@ -145,15 +167,15 @@ touch webpack.config.js
 Give **webpack.config.js** the following content
 
 ```js
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const ESLintPlugin = require("eslint-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const config = {
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
     new MiniCssExtractPlugin(),
     new ESLintPlugin(),
@@ -163,7 +185,7 @@ const config = {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
@@ -174,12 +196,12 @@ const config = {
 };
 
 module.exports = (env, argv) => {
-  if (argv.mode === "development") {
-    config.devtool = "inline-source-map";
+  if (argv.mode === 'development') {
+    config.devtool = 'inline-source-map';
   }
-  if (argv.mode === "production") {
+  if (argv.mode === 'production') {
     config.optimization = {
-      minimizer: [new CssMinimizerPlugin(), "..."],
+      minimizer: [new CssMinimizerPlugin(), '...'],
     };
   }
   return config;
@@ -235,15 +257,15 @@ In **style.css** add some css
 In **index.js** add the following content
 
 ```js
-import "./style.css";
+import './style.css';
 
 const markup = `
 <h1>Webpack + ESLint + Prettier</h1>
 `;
 
 const h1 = new DOMParser()
-  .parseFromString(markup, "text/html")
-  .querySelector("h1");
+  .parseFromString(markup, 'text/html')
+  .querySelector('h1');
 
 document.body.appendChild(h1);
 ```
