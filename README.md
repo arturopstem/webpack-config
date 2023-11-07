@@ -19,6 +19,8 @@ Add node_modules to .gitignore to not upload all the packages to the remote repo
 
 ```txt
 node_modules
+dist
+
 ```
 
 ## Initialize NPM
@@ -153,7 +155,7 @@ npm i -D webpack webpack-cli
 Install webpack plugins
 
 ```console
-npm i -D html-webpack-plugin eslint-webpack-plugin mini-css-extract-plugin css-minimizer-webpack-plugin css-loader webpack-dev-server
+npm i -D html-webpack-plugin eslint-webpack-plugin mini-css-extract-plugin css-minimizer-webpack-plugin css-loader webpack-dev-server gh-pages
 ```
 
 ## Install Sass
@@ -242,7 +244,7 @@ In file **package.json**, update scripts to contain the following:
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development",
     "start": "webpack serve --open --mode=development",
-    "ghdeploy": "git subtree push --prefix dist origin gh-pages"
+    "ghdeploy": "npm run build && gh-pages -d dist"
   },
 ```
 
