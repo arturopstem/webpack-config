@@ -8,7 +8,7 @@
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development",
     "start": "webpack serve --open --mode=development",
-    "ghdeploy": "git subtree push --prefix dist origin gh-pages"
+    "ghdeploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-webpack-plugin": "^4.0.1",
+    "gh-pages": "^6.0.0",
     "html-webpack-plugin": "^5.5.1",
     "mini-css-extract-plugin": "^2.7.6",
     "postcss": "^8.4.24",
