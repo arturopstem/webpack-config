@@ -72,7 +72,7 @@ npm i -D webpack webpack-cli
 Install webpack plugins
 
 ```console
-npm i -D html-webpack-plugin eslint-webpack-plugin mini-css-extract-plugin css-minimizer-webpack-plugin css-loader webpack-dev-server gh-pages
+npm i -D html-webpack-plugin mini-css-extract-plugin css-minimizer-webpack-plugin css-loader webpack-dev-server gh-pages
 ```
 
 ## Install tailwind
