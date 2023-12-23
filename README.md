@@ -139,9 +139,8 @@ Open Command Pallete with `Ctrl + Shift + P`, look for and select `Preferences: 
 ```json
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["javascript"],
   "editor.formatOnSave": true
 }
 ```
