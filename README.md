@@ -15,7 +15,7 @@ To begin, create a **.gitignore** file:
 touch .gitignore
 ```
 
-Add node_modules to .gitignore to not upload all the packages to the remote repo:
+Add node_modules and dist to .gitignore to not upload all the packages to the remote repo:
 
 ```txt
 node_modules
