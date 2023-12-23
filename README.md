@@ -140,9 +140,8 @@ Open Command Pallete with `Ctrl + Shift + P`, look for and select `Preferences: 
 {
   "css.lint.unknownAtRules": "ignore",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["javascript"],
   "editor.formatOnSave": true
 }
 ```
