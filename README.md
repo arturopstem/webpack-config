@@ -32,7 +32,7 @@ npm init -y
 ## ESLint and Prettier
 
 ```console
-npm i -D eslint prettier eslint-config-prettier
+npm i -D eslint@8 prettier eslint-config-prettier
 ```
 
 Initialize ESLint config
