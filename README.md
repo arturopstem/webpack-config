@@ -120,6 +120,7 @@ with the following rules
 
 ```json
 {
+  "htmlWhitespaceSensitivity": "ignore",
   "singleQuote": true,
   "overrides": [
     {
